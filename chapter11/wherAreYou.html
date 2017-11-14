@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Function</title>
+  <script>
+      window.onload = init;
+
+      function init() {
+
+          function whereAreYou() {
+              var justAVar = "Just an every day LOCAL";
+
+              function inner() {
+                  return justAVar;
+              }
+
+              return inner;
+          }
+
+          var innerFunction = whereAreYou();
+          var result = innerFunction();
+          console.log(result);
+      }
+
+      var inner
+  </script>
+</head>
+<body>
+
+</body>
+</html>

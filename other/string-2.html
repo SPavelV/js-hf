@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>String</title>
+  <script>
+    function validate(phoneNumber) {
+        if (phoneNumber.lingth > 8 || phoneNumber.length < 7) {
+            return false;
+        }
+        var first = phoneNumber.substring(0,3);
+        var second = phoneNumber.substring(phoneNumber.length - 4);
+
+        if(isNaN(first) || isNaN(second)) {
+            return false;
+        }
+
+        if(phoneNumber.length === 8) {
+            return (phoneNumber.charAt(3) === "-");
+        }
+
+        return true;
+    }
+
+    console.log("Validate 123-4567: " + validate("123-4567"));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure2</title>
+  <script>
+    function multN(n) {
+        return function(a) {
+            return a * n;
+        }
+    }
+
+    var num1 = 5;
+    var num2 = 2;
+
+    var funcitonMultiNumber = multN(num1);
+
+    console.log(funcitonMultiNumber(num2));
+    console.log(funcitonMultiNumber(num2));
+    console.log(funcitonMultiNumber(num2));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

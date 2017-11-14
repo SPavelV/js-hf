@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure</title>
+  <script>
+    function makePassword(password) {
+        return function(passwordGuess){
+            return (passwordGuess ===password);
+        };
+    }
+
+    var password = 'secret';
+    var enteredPass = 'secret';
+    var checkPassword = makePassword(password);
+    console.log('Entered password: ' + enteredPass + ' is ' +checkPassword(enteredPass));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
