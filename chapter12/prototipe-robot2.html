@@ -15,7 +15,7 @@
       };
 
       Game.prototype.unlock = function () {
-          if (this.level == 42) {
+          if (this.level === 42) {
               Robot.prototype.deployLaser = function () {
                   console.log(this.name + " is blasting you with laser beams.")
               };
