@@ -20,6 +20,9 @@
       Robot.prototype.blinkLights = function () {
           console.log("I " + this.name + " and i can blink lights.")
       };
+      Robot.prototype.toString = function() {
+          return this.name + " Robot belonging to " + this.owner;
+      };
 
       function SpaceRobot(name, year, owner, homePlanet) {
           this.name = name;
@@ -47,6 +50,10 @@
       simon.makeCoffee();
       simon.blinkLights();
       simon.speak();
+
+    var toy = new Robot("Toy", 2013, "Avary");
+    console.log(toy.toString());
+    console.log("Robot is: " + toy);
 
 
   </script>
